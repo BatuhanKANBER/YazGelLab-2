@@ -219,21 +219,21 @@ def bubbleSort(data, drdata, speed):
 def strt():
     global data
 
-    if algo_var.get() == 'Hızlı':
+    if algo_var.get() == 'Quick':
         quicksort(data, 0, len(data) - 1, drdata, speed.get())
         drdata(data, ['white' for i in range(len(data))])
 
-    elif algo_var.get() == 'Kabarcık':
+    elif algo_var.get() == 'Bubble':
         bubbleSort(data, drdata, speed.get())
 
-    elif algo_var.get() == 'Birleştirmeli':
+    elif algo_var.get() == 'Merge':
         mergesort(data, drdata, speed.get())
         drdata(data, ['white' for i in range(len(data))])
 
-    elif algo_var.get() == 'Seçmeli':
+    elif algo_var.get() == 'Selection':
         selectionSort(data, drdata, speed.get())
          
-    elif algo_var.get() == 'Eklemeli':
+    elif algo_var.get() == 'Insertion':
         insertion_sort(data, drdata, speed.get())
 
 
@@ -249,7 +249,7 @@ canva = Canvas(root, width=1000, height=720, bg='white')
 canva.grid(row=0, column=1, padx=10, pady=5)
 
 Label(uif, text="Algoritmalar: ", bg='grey', fg='black', font=('arial', 12)).grid(row=0, column=0, padx=5, pady=5, sticky=W)
-alg = ttk.Combobox(uif, textvariable=algo_var, values=['Kabarcık', 'Hızlı', 'Birleştirmeli', 'Seçmeli','Eklemeli'])
+alg = ttk.Combobox(uif, textvariable=algo_var, values=['Bubble', 'Quick', 'Merge', 'Selection','Insertion'])
 alg.grid(row=1, column=0, padx=25, pady=5)
 alg.current(0)
 
