@@ -5,7 +5,7 @@ import random
 
 
 root = Tk()
-root.title('201307048 - 201307044 - 201307063')
+root.title('Batuhan KANBER:201307048 - Mehmet Berk BAYTÜRK:201307044 - Selim Metehan AKTAŞ:201307063')
 root.geometry('1920x1080')
 root.config(bg='darkgray')
 
